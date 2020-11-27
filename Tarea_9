@@ -1,0 +1,10 @@
+#!/bin/bash
+#informacion borrada para que no me roben info. 
+function enviarM(){
+	while read txt;
+	do
+	sendemail -f (gmail) -t $txt -s smtp.gmail.com:587 -u "Titulo" -m "Cuerpo" -v -xu (usuario del gmail) -xp (contraseña del gmail) -o tls=yes
+	done < "(ruta al txt)"
+}
+enviarM
+echo "Mensajes enviados correctamente"
