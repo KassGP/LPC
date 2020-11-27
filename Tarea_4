@@ -1,0 +1,38 @@
+#!/bin/bash
+function cuadrado(){
+	r=$(($n*$n))
+	echo "El Cuadrado de" $n "es:" $r
+}
+function cubo(){
+	r=$(($n*$n*$n))
+	echo "El Cubo de" $n "es:" $r
+}
+
+while :
+do
+	read -p "Introduzca un numero: " n 
+    	clear
+	echo "---- Opciones ----"
+	echo "Seleccione la operación a realizar"
+	echo "Presione 1 para elevarlo al cuadrado"
+	echo "Presione 2 para elevarlo al cubo"
+	echo "Presione 3 para salir"
+	read var "Seleccione la opcion que desee"
+	case $var in
+		1)
+			clear
+			cuadrado
+		;;
+
+		2)
+			clear
+			cubo
+		;;
+		
+		3)
+			clear
+      			echo "Nos vemos"
+			break
+		;;
+	esac
+done
